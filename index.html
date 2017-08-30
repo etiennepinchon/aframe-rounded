@@ -9,6 +9,13 @@
   </head>
   <body>
     <a-scene>
+
+      <a-assets>
+        <a-asset-item id="tree-obj" src="https://rawgit.com/mrdoob/three.js/dev/examples/obj/cubes/cubes.obj"></a-asset-item>
+        <a-asset-item id="tree-mtl" src="https://rawgit.com/mrdoob/three.js/dev/examples/obj/cubes/cubes.mtl"></a-asset-item>
+      </a-assets>
+      <a-entity glow="enabled:true; scale:3.3" obj-model="obj: #tree-obj; mtl: #tree-mtl" position="-30 0 -40" opacity="0.9"></a-entity>
+
       <a-box glow="enabled:true" position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9"></a-box>
       <a-sphere glow="enabled:true; scale:1.3" position="0 1.25 -5" radius="1.25" color="#EF2D5E"></a-sphere>
       <a-cylinder glow="side: front; scale:1.3; c: 1; p: 1.3; color: #FF00FF;" position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
