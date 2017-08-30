@@ -1,0 +1,23 @@
+{
+  "name": "aframe-glow",
+  "description": "Glow component for AFrame (https://aframe.io).",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "start": "budo --live --verbose --port 3000 --open",
+    "dist": "webpack lib/glow.js dist/aframe-glow-component.js && webpack -p lib/glow.js dist/aframe-glow-component.min.js"
+  },
+  "devDependencies": {
+    "browserify": "^12.0.1",
+    "budo": "^7.1.0",
+    "shelljs": "^0.6.0",
+    "webpack": "^1.12.9",
+    "ghpages": "0.0.3"
+  },
+  "keywords": [
+    "aframe",
+    "aframe-component",
+    "webvr",
+    "vr"
+  ]
+}
