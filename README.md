@@ -1,38 +1,61 @@
 # A-Frame Glow Component
 
-Glow component for [A-Frame](https://aframe.io) to add on any entities.
+Glow component for [A-Frame](https://aframe.io) to add on your entities.
 
 ## Demo
 
 ![Alt text](static/screenshot.png)
 
-#### [Live demo](https://etiennepinchon.github.io/aframe-refraction/)
+#### [Live demo](https://etiennepinchon.github.io/aframe-glow/)
 
 ## Getting Started
 
 ```html
-<a-entity refraction></entity>
+<a-entity glow></entity>
 ```
 
 To turn it off:
 
 ```html
-<a-entity refraction="enabled:false"></entity>
+<a-entity glow="enabled:false"></entity>
 ```
 
 Properties:
 
-#### Ratio (default: 0.985, min: 0.912, max: 1)
+#### C (default: 1, min: 0, max: 1)
 
 ```html
-<a-entity refraction="ratio:0.935"></entity>
+<a-entity glow="c:0.3;"></entity>
 ```
 
-#### Reflectivity (default: 0.9, min: 0.6, max: 1.2)
+#### P (default: 1.4, min: 0, max: 6)
 
 ```html
-<a-entity refraction="reflectivity:1.1"></entity>
+<a-entity glow="p:1.1;"></entity>
 ```
+
+#### Color (default: #FFFF00)
+
+```html
+<a-entity glow="color: #FF00FF;"></entity>
+```
+
+#### Scale (default: 2)
+
+Adjust the scale of the glow.
+
+```html
+<a-entity glow="scale: 1.3; color: #FF00FF;"></entity>
+```
+
+#### Side (default: front, values: front/back)
+
+Change the type of glow.
+
+```html
+<a-entity glow="side: back; scale: 1.3; color: #FF00FF; c: 0.3; p: 3;"></entity>
+```
+
 
 ## Want to make some changes to it?
 
