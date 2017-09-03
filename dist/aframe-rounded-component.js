@@ -60,7 +60,7 @@
 	  init: function () {
 	    this.rounded = new THREE.Mesh( this.draw(), new THREE.MeshPhongMaterial( { color: new THREE.Color(this.data.color), side: THREE.DoubleSide } ) );
 	    this.updateOpacity();
-	    this.el.object3D.add( this.rounded );
+	    this.el.setObject3D('mesh', this.rounded)
 	  },
 	  update: function () {
 	    if (this.data.enabled) {
@@ -92,21 +92,21 @@
 	  },
 	  draw: function() {
 	    var roundedRectShape = new THREE.Shape();
-			function roundedRect( ctx, x, y, width, height, topLeftRadius, topRightRadius, bottomLeftRadius, bottomRightRadius ) {
+	    function roundedRect( ctx, x, y, width, height, topLeftRadius, topRightRadius, bottomLeftRadius, bottomRightRadius ) {
 	      if (!topLeftRadius) { topLeftRadius = 0.00001; }
 	      if (!topRightRadius) { topRightRadius = 0.00001; }
 	      if (!bottomLeftRadius) { bottomLeftRadius = 0.00001; }
 	      if (!bottomRightRadius) { bottomRightRadius = 0.00001; }
-				ctx.moveTo( x, y + topLeftRadius );
-				ctx.lineTo( x, y + height - topLeftRadius );
-				ctx.quadraticCurveTo( x, y + height, x + topLeftRadius, y + height );
-				ctx.lineTo( x + width - topRightRadius, y + height );
-				ctx.quadraticCurveTo( x + width, y + height, x + width, y + height - topRightRadius );
-				ctx.lineTo( x + width, y + bottomRightRadius );
-				ctx.quadraticCurveTo( x + width, y, x + width - bottomRightRadius, y );
-				ctx.lineTo( x + bottomLeftRadius, y );
-				ctx.quadraticCurveTo( x, y, x, y + bottomLeftRadius );
-			}
+	      ctx.moveTo( x, y + topLeftRadius );
+	      ctx.lineTo( x, y + height - topLeftRadius );
+	      ctx.quadraticCurveTo( x, y + height, x + topLeftRadius, y + height );
+	      ctx.lineTo( x + width - topRightRadius, y + height );
+	      ctx.quadraticCurveTo( x + width, y + height, x + width, y + height - topRightRadius );
+	      ctx.lineTo( x + width, y + bottomRightRadius );
+	      ctx.quadraticCurveTo( x + width, y, x + width - bottomRightRadius, y );
+	      ctx.lineTo( x + bottomLeftRadius, y );
+	      ctx.quadraticCurveTo( x, y, x, y + bottomLeftRadius );
+	    }
 
 	    var corners = [this.data.radius, this.data.radius, this.data.radius, this.data.radius];
 	    if (this.data.topLeftRadius != -1) { corners[0] = this.data.topLeftRadius; }
