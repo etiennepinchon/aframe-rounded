@@ -1,6 +1,7 @@
 {
   "name": "aframe-rounded",
-  "main": "dist/aframe-rounded.min.js",
+  "main": "lib/rounded.js",
+  "webpack": "dist/aframe-rounded-component.min.js",
   "description": "Rounded primitive/component for AFrame (https://aframe.io).",
   "version": "1.0.01",
   "license": "MIT",
