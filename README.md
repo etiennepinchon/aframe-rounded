@@ -61,11 +61,6 @@ If you wish to serve the site from a different port:
 
     PORT=8000 npm start
 
-
-## Acknowledgement
-
-file:///Users/etienne/Downloads/three.js-master/examples/webgl_geometry_shapes.html
-
 ## License
 
 Distributed under an [MIT License](LICENSE).
