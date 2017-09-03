@@ -1,60 +1,35 @@
-# A-Frame Glow Component
+# A-Frame Rounded Primitive/Component
 
-Glow component for [A-Frame](https://aframe.io) to add on your entities.
+Rounded Primitive/Component for [A-Frame](https://aframe.io) to get a rectangle with rounded edges.
+This is great if you need to get smooth edges in your VR UIs.
+
+Note: If you need more control you can check https://github.com/fernandojsg/aframe-slice9-component but the corners will be pixelated (that is why I wanted to use another method to create smooth edges).
 
 ## Demo
 
 ![Alt text](static/screenshot.png)
 
-#### [Live demo](https://etiennepinchon.github.io/aframe-glow/)
+#### [Live demo](https://etiennepinchon.github.io/aframe-rounded/)
 
 ## Getting Started
 
 ```html
-<a-entity glow></entity>
+<a-rounded position="0 1.2 -5" width="4" height="3.1" radius="0.05"></a-rounded>
 ```
 
-To turn it off:
+### Attributes
 
-```html
-<a-entity glow="enabled:false"></entity>
-```
-
-Properties:
-
-#### C (default: 1, min: 0, max: 1)
-
-```html
-<a-entity glow="c:0.3;"></entity>
-```
-
-#### P (default: 1.4, min: 0, max: 6)
-
-```html
-<a-entity glow="p:1.1;"></entity>
-```
-
-#### Color (default: #FFFF00)
-
-```html
-<a-entity glow="color: #FF00FF;"></entity>
-```
-
-#### Scale (default: 2)
-
-Adjust the scale of the glow.
-
-```html
-<a-entity glow="scale: 1.3; color: #FF00FF;"></entity>
-```
-
-#### Side (default: front, values: front/back)
-
-Change the type of glow.
-
-```html
-<a-entity glow="side: back; scale: 1.3; color: #FF00FF; c: 0.3; p: 3;"></entity>
-```
+| Name | Description | Type | Default |
+| --- | --- | --- | --- |
+| width | Width of the container | number | 1 |
+| height | Height of the container | number | 1 |
+| radius | Border radius of the container | number | 0.3 |
+| top-left-radius | Border radius of the container | number | -1 (inherit) |
+| top-right-radius | Border radius of the container | number | -1 (inherit) |
+| bottom-left-radius | Border radius of the container | number | -1 (inherit) |
+| bottom-right-radius | Border radius of the container | number | -1 (inherit) |
+| color | Color of the container. | color | "#F0F0F0" |
+| opacity | Opacity of the container | opacity | 1 |
 
 
 ## Want to make some changes to it?
@@ -89,8 +64,7 @@ If you wish to serve the site from a different port:
 
 ## Acknowledgement
 
-Based on the work of @stemkoski for ThreeJS:
-http://stemkoski.github.io/Three.js/Shader-Glow.html
+file:///Users/etienne/Downloads/three.js-master/examples/webgl_geometry_shapes.html
 
 ## License
 
